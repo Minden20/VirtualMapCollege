@@ -1,0 +1,20 @@
+ #game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 50px); 
+    grid-template-rows: repeat(10, 50px);
+    gap: 2px;
+    background-color: #333;
+    width: max-content;
+  }
+
+  .cell {
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wall { background-color: #555; }
+  .player { background-color: #3498db; border-radius: 50%; }
