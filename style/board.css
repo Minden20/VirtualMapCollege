@@ -38,4 +38,24 @@
 .ladder-down::after {
   content: "▼";
 }
-.stairs { background-color: gold; }
+.stairs {
+  background-color: gold;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.box {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+.trigger {
+ background-color: #ff1212;
+}
