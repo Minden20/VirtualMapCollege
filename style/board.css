@@ -1,20 +1,41 @@
- #game-board {
-    display: grid;
-    grid-template-columns: repeat(10, 50px); 
-    grid-template-rows: repeat(10, 50px);
-    gap: 2px;
-    background-color: #333;
-    width: max-content;
-  }
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  gap: 2px;
+  background-color: #333;
+  width: max-content;
+}
 
-  .cell {
-    width: 50px;
-    height: 50px;
-    background-color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .wall { background-color: #555; }
-  .player { background-color: #3498db; border-radius: 50%; }
+.wall {
+  background-color: #555;
+}
+.player {
+  background-color: #3498db;
+  border-radius: 50%;
+}
+.ladder-up {
+  background-color: #f1c40f;
+  position: relative;
+}
+.ladder-up::after {
+  content: "▲";
+}
+
+.ladder-down {
+  background-color: #e67e22;
+  position: relative;
+}
+.ladder-down::after {
+  content: "▼";
+}
+.stairs { background-color: gold; }
