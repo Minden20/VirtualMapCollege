@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Інтерактивна мапа ПГФК ДВНЗ "УжНУ"</title>
+        <link rel="shortcut icon" href="image/logo.jpg">
+        <link rel="stylesheet" href="style/mappage.css">
+        <link rel="stylesheet" href="style/board.css">
+
+        <meta name="description" conten="Віртуальна мапа Природничо Гуманітарного Фахового Коледжу.">
+        <meta name="author" content="KN-33">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta property="og:title" content="Віртуальна мапа коледжу">
+        <meta property="og.type" content="website">
+        <meta property="og.url" content="https://example.com/main">
+        <meta property="og.image" content="https://example.com/logo.jpg">
+        <meta property="og.description" content="Інтерактивна віртуальна мапа коледжу в реальному часі">
+    </head>
+    <body>
+       <header>
+            <picture>
+                <a href="main.html">
+                    <img src="image/logo.jpg" alt="ПГФК ДВНЗ 'УжНУ'" width="60">
+                </a>
+            </picture>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#main" title="Головна">Головна</a>
+                        <a href="#about" title="Про коледж">Про коледж</a>
+                        <a href="#contacts" title="Контакти">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
+       </header>
+
+       <main>
+            <section id="main">
+                <h2>Віртуальна мапа</h2>
+                <div class="game-container">
+                    <div id="game-board" class="board"></div>
+                    <div id="overlay" class="overlay" style="display: none;">
+                        <div class="box">
+                            <h2>Заголовок</h2>
+                            <p>Контент боксу</p>
+                            <button onclick="hideBox()">Закрити</button>
+                        </div>
+                    </div>
+
+                <script src="logick/interectiv.js"></script>
+                </div>
+            </section>
+
+            <section id="about">
+                <h2>Про коледж</h2>
+                <p>Природничо-гуманітарний фаховий коледж Державного вищого навчального закладу «Ужгородський національний університет» – заклад фахової перед вищої освіти, підпорядкований Міністерству освіти і науки України.
+                    Природничо-гуманітарний коледж УжДІІЕП був створений на базі факультету молодших спеціалістів та спеціалізованої школи УжДІІЕП (наказ № 103 від 8 квітня 1999 р.). Його директорами були Яцина Антон Миколайович (08.04.1999-31.08.1999), Попадюк Катерина Василівна (06.10.1999-26.09.2000). З 27.09.2000 року по 17.11.2000 року виконувачем обов’язків директора коледжу було призначено Росоху Володимира Войтеховича. З 18.11.2000 року Росоха В.В. – директор навчального закладу. Природничо-гуманітарний коледж був структурним підрозділом УжДІІЕП, згодом – Закарпатського державного університету.
+                    Нині коледж є вагомим структурним підрозділом Державного вищого навчального закладу «Ужгородський національний університет» (наказ від 28.03.2013 року № 108/01-03). Природничо-гуманітарний фаховий коледж здійснює підготовку фахівців за спорідненими спеціальностями університету та узгодженими освітньо-професійними програмами, проводить активну культурно-просвітницьку діяльність.</p>
+            </section>
+       </main>
+
+       <footer id="contacts">
+            <h2>Наші контакти</h2>
+            <address>
+                Адреса: м.Ужгород, вул.Українська,19.<br>
+                Тел. приймальної: 312-64-73-21<br>
+                Електронна адреса:
+                <a href="mailto:example@gmail.com"
+                    title="Написати листа">collegeuzhnu@ukr.net</a>
+            </address>
+
+            <p>
+                <a href="https://www.college.uzhnu.edu.ua/"
+                    target="_blank"
+                    title="Офіційни сайт коледжу">
+                Офіціний сайт коледжу
+                </a>
+            </p>
+       </footer>
+    </body>
+</html>

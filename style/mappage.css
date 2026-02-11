@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: slateblue;
+    padding: 10px 20px;
+}
+
+img {
+    border-radius: 25px;
+}
+
+nav ul li {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    background: transparent;
+    padding: 10px;
+}
+
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 24px;
+    background-color: blueviolet;
+    border-radius: 20px;
+    font-family: cursive;
+
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: mediumpurple;
+    transform: translateY(-2px);
+}
+
+body {
+    background-color: darkslateblue;
+}
+
+main {
+    text-align: center;
+    margin: 20px 20px;
+}
+
+h2 {
+    font-family: cursive;
+    font-size: 48px;
+    color: white;
+}
+
+#about p {
+    font-size: 20px;
+    font-family: cursive;
+    color: whitesmoke;
+}
+
+#contacts p {
+    padding: 20px;
+}
+
+#contacts a:hover{
+    color: lightskyblue;
+}
+
+footer {
+    background-color: slateblue;
+    font-family: cursive;
+    font-size: 18px;
+    color: whitesmoke;
+    text-align: center;
+}
