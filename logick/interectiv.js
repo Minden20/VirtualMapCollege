@@ -1,41 +1,52 @@
-const boardElement = document.getElementById("game-board");
+window.addEventListener('DOMContentLoaded', () => {
+  const boardElement = document.getElementById("game-board");
 
-const college = {
+  const college = {
   floar1: {
     grid: [
-      [0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
-      [0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
-      [0, 0, 0, 0, 0, 4, 0, 0, 0, 0],
-      [1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
-      [0, 1, 1, 1, 1, 1, 1, 0, 1, 0],
-      [0, 0, 0, 0, 0, 2, 1, 0, 0, 0],
-      [0, 1, 1, 1, 1, 0, 0, 0, 1, 0],
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 2, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 2, 1, 0, 1, 0, 1],
+      [1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1],
+      [1, 1, 4, 1, 1, 1, 1, 4, 1, 1, 0, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 0, 1, 1, 4, 1, 4, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 4, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1],
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     ],
     spawnAfterUp: { x: 0, y: 0 },
   },
   floor2: {
     grid: [
-      [3, 0, 0, 0, 0],
-      [0, 1, 1, 1, 0],
-      [0, 1, 0, 0, 0],
-      [0, 0, 0, 1, 0],
-      [0, 0, 0, 0, 0],
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],                              
+      [1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 3, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 3, 1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1],
+      [1, 4, 1, 1, 1, 1, 1, 4, 1, 1, 0, 1, 1, 4, 1, 1, 1, 4, 1, 1, 1, 1, 4, 1, 1, 1, 0, 1, 1, 1, 1, 4, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 4, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 4, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     ],
-    spawnAfterDown: { x: 2, y: 2 },
+    spawnAfterDown: { x: 0, y: 0 },
   },
 };
 
 let currentFloor = "floar1";
-let player = { x: 0, y: 0 };
+let player = { x: 17, y: 10 };
 
 function draw() {
   boardElement.innerHTML = "";
   const currentGrid = college[currentFloor].grid;
 
-  boardElement.style.gridTemplateColumns = `repeat(${currentGrid[0].length}, 50px)`;
+  const CELL_SIZE = 25;
+  boardElement.style.gridTemplateColumns = `repeat(${currentGrid[0].length}, ${CELL_SIZE}px)`;
+  boardElement.style.gridTemplateRows = `repeat(${currentGrid.length}, ${CELL_SIZE}px)`;
 
   currentGrid.forEach((row, y) => {
     row.forEach((cell, x) => {
@@ -62,11 +73,11 @@ function movePlayer(newX, newY) {
   if (cellValue === 1) return;
   if (cellValue === 2) {
     currentFloor = "floor2";
-    player.x = 0;
-    player.y = 0;
+    player.x = 10;
+    player.y = 2;
   } else if (cellValue === 3) {
     currentFloor = "floar1";
-    player.x = 2;
+    player.x = 10;
     player.y = 2;
   } else {
     player.x = newX;
@@ -83,11 +94,12 @@ function hideBox() {
   document.getElementById("overlay").style.display = "none";
 }
 window.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowUp") movePlayer(player.x, player.y - 1);
-  if (e.key === "ArrowDown") movePlayer(player.x, player.y + 1);
-  if (e.key === "ArrowLeft") movePlayer(player.x - 1, player.y);
-  if (e.key === "ArrowRight") movePlayer(player.x + 1, player.y);
+  if (e.key === "W" || e.key === "w" || e.key === "Ц" || e.key === "ц") movePlayer(player.x, player.y - 1);
+  if (e.key === "S" || e.key === "s" || e.key === "І" || e.key === "і") movePlayer(player.x, player.y + 1);
+  if (e.key === "A" || e.key === "a" || e.key === "Ф" || e.key === "ф") movePlayer(player.x - 1, player.y);
+  if (e.key === "D" || e.key === "d" || e.key === "В" || e.key === "в") movePlayer(player.x + 1, player.y);
   if (e.key === "Enter") { if (college[currentFloor].grid[player.y][player.x] === 4) showBox()}; 
 });
 
-draw();
+  draw();
+});
