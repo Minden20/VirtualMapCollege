@@ -1,36 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Інтерактивна мапа ПГФК ДВНЗ "УжНУ"</title>
-        <link rel="shortcut icon" href="image/logo.jpg">
-        <link rel="stylesheet" href="style/mainpage.css">
-
-        <meta name="description" conten="Віртуальна мапа Природничо Гуманітарного Фахового Коледжу.">
-        <meta name="author" content="KN-33">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <meta property="og:title" content="Віртуальна мапа коледжу">
-        <meta property="og.type" content="website">
-        <meta property="og.url" content="https://example.com/main">
-        <meta property="og.image" content="https://example.com/logo.jpg">
-        <meta property="og.description" content="Інтерактивна віртуальна мапа коледжу в реальному часі">
+        <link rel="stylesheet" href="style/board.css">
+        <title>Interectiv Map</title>
     </head>
     <body>
-        <header>
-            <picture>
-                <img src="image/logo_header.png" alt="ПГФК ДВНЗ 'УжНУ'" width="400">
-            </picture>
-            <h1>Віртуальна мапа коледжу</h1>
-        </header>
+     <div>
+            <div id="game-board" class="board"></div>
+    </div>
+        <div id="overlay" class="overlay" style="display: none;">
+  <div class="box">
+    <h2>Заголовок</h2>
+    <p>Контент боксу</p>
+    <button onclick="hideBox()">Закрити</button>
+  </div>
+</div>
 
-        <main>
-            <h2>Щоб почати досліджувати жми на кнопку "Почати гру"</h2>
-            <a href="mappage.html" class="button">Почати гру</a>
-        </main>
-        <footer>
-
-        </footer>
+</style>
+<script src="logick/interectiv.js"></script>
     </body>
 </html>
