@@ -34,7 +34,7 @@
 
 ## 🚀 Як запустити
 
-Потрібно перейти за посиланням https://zingy-daffodil-5a9caf.netlify.app/mappage
+Потрібно перейти за посиланням [https://zingy-daffodil-5a9caf.netlify.app/mappage](https://zingy-daffodil-5a9caf.netlify.app)
 ---
 ## 👥 Розробники
 
